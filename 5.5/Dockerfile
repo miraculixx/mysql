@@ -49,6 +49,7 @@ RUN mkdir -p /etc/mysql/conf.d \
 		echo 'user = mysql'; \
 		echo 'datadir = /var/lib/mysql'; \
 		echo 'default-time-zone = +00:00'; \
+		echo 'max_allowed_packet=64M'; \
 		echo 'lower_case_table_names = 1'; \
 		echo '!includedir /etc/mysql/conf.d/'; \
 	} > /etc/mysql/my.cnf
